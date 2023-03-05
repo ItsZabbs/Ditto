@@ -44,7 +44,7 @@ def confirm(message: str, ephemeral: bool = True) -> Callable[[T], T]:
         await prompt.wait()
 
         try:
-            await interaction.delete_original_message()
+            await interaction.delete_original_response()
         except discord.HTTPException:
             pass
 
